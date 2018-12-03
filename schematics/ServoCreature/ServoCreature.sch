@@ -1,0 +1,162 @@
+EESchema Schematic File Version 4
+LIBS:ServoCreature-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x01 5VBat1
+U 1 1 5BE96103
+P 2700 1200
+F 0 "5VBat1" H 2780 1242 50  0000 L CNN
+F 1 "Conn_01x01" H 2780 1151 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 2700 1200 50  0001 C CNN
+F 3 "~" H 2700 1200 50  0001 C CNN
+	1    2700 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 BatGnd1
+U 1 1 5BE96173
+P 2700 1400
+F 0 "BatGnd1" H 2780 1442 50  0000 L CNN
+F 1 "Conn_01x01" H 2780 1351 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 2700 1400 50  0001 C CNN
+F 3 "~" H 2700 1400 50  0001 C CNN
+	1    2700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BE962AC
+P 2500 1550
+F 0 "#PWR02" H 2500 1300 50  0001 C CNN
+F 1 "GND" H 2505 1377 50  0000 C CNN
+F 2 "" H 2500 1550 50  0001 C CNN
+F 3 "" H 2500 1550 50  0001 C CNN
+	1    2500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BE9637A
+P 2500 1050
+F 0 "#PWR01" H 2500 900 50  0001 C CNN
+F 1 "+5V" H 2515 1223 50  0000 C CNN
+F 2 "" H 2500 1050 50  0001 C CNN
+F 3 "" H 2500 1050 50  0001 C CNN
+	1    2500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5BE963F4
+P 4250 1100
+F 0 "#PWR03" H 4250 950 50  0001 C CNN
+F 1 "+5V" H 4265 1273 50  0000 C CNN
+F 2 "" H 4250 1100 50  0001 C CNN
+F 3 "" H 4250 1100 50  0001 C CNN
+	1    4250 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4004 D1
+U 1 1 5BE971BB
+P 4250 1350
+F 0 "D1" V 4296 1429 50  0000 L CNN
+F 1 "1N4004" V 4205 1429 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4250 1175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4250 1350 50  0001 C CNN
+	1    4250 1350
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2500 1400 2500 1550
+Wire Wire Line
+	2500 1200 2500 1050
+Wire Wire Line
+	4250 1100 4250 1200
+$Comp
+L power:GND #PWR04
+U 1 1 5BE994A9
+P 2750 2950
+F 0 "#PWR04" H 2750 2700 50  0001 C CNN
+F 1 "GND" H 2755 2777 50  0000 C CNN
+F 2 "" H 2750 2950 50  0001 C CNN
+F 3 "" H 2750 2950 50  0001 C CNN
+	1    2750 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPin0-PWM1
+U 1 1 5BE9E2C1
+P 2500 2400
+F 0 "bitPin0-PWM1" H 2420 2175 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2266 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 2400 50  0001 C CNN
+F 3 "~" H 2500 2400 50  0001 C CNN
+	1    2500 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPinGnd1
+U 1 1 5BE9E6DE
+P 2500 2800
+F 0 "bitPinGnd1" H 2420 2575 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2666 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 2800 50  0001 C CNN
+F 3 "~" H 2500 2800 50  0001 C CNN
+	1    2500 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 2800 2750 2800
+Wire Wire Line
+	2750 2800 2750 2950
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5BEA7CF0
+P 4750 2300
+F 0 "J1" H 4777 2276 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 4777 2185 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x03_P3.81mm_Drill1.2mm" H 4750 2300 50  0001 C CNN
+F 3 "~" H 4750 2300 50  0001 C CNN
+	1    4750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5BEA88E9
+P 4150 2000
+F 0 "#PWR05" H 4150 1750 50  0001 C CNN
+F 1 "GND" H 4155 1827 50  0000 C CNN
+F 2 "" H 4150 2000 50  0001 C CNN
+F 3 "" H 4150 2000 50  0001 C CNN
+	1    4150 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1500 3400 2300
+Wire Wire Line
+	3400 2300 4550 2300
+Wire Wire Line
+	3400 1500 4250 1500
+Wire Wire Line
+	4550 2200 4550 1900
+Wire Wire Line
+	4550 1900 4150 1900
+Wire Wire Line
+	4150 1900 4150 2000
+Wire Wire Line
+	4550 2400 2700 2400
+$EndSCHEMATC

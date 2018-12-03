@@ -1,0 +1,334 @@
+EESchema Schematic File Version 4
+LIBS:DCMotorCreature-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x01 5VBat1
+U 1 1 5BE96103
+P 2700 1200
+F 0 "5VBat1" H 2780 1242 50  0000 L CNN
+F 1 "Conn_01x01" H 2780 1151 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 2700 1200 50  0001 C CNN
+F 3 "~" H 2700 1200 50  0001 C CNN
+	1    2700 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 BatGnd1
+U 1 1 5BE96173
+P 2700 1400
+F 0 "BatGnd1" H 2780 1442 50  0000 L CNN
+F 1 "Conn_01x01" H 2780 1351 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 2700 1400 50  0001 C CNN
+F 3 "~" H 2700 1400 50  0001 C CNN
+	1    2700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BE962AC
+P 2500 1550
+F 0 "#PWR02" H 2500 1300 50  0001 C CNN
+F 1 "GND" H 2505 1377 50  0000 C CNN
+F 2 "" H 2500 1550 50  0001 C CNN
+F 3 "" H 2500 1550 50  0001 C CNN
+	1    2500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BE9637A
+P 2500 1050
+F 0 "#PWR01" H 2500 900 50  0001 C CNN
+F 1 "+5V" H 2515 1223 50  0000 C CNN
+F 2 "" H 2500 1050 50  0001 C CNN
+F 3 "" H 2500 1050 50  0001 C CNN
+	1    2500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5BE963F4
+P 4250 1100
+F 0 "#PWR03" H 4250 950 50  0001 C CNN
+F 1 "+5V" H 4265 1273 50  0000 C CNN
+F 2 "" H 4250 1100 50  0001 C CNN
+F 3 "" H 4250 1100 50  0001 C CNN
+	1    4250 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4004 D1
+U 1 1 5BE971BB
+P 4250 1350
+F 0 "D1" V 4296 1429 50  0000 L CNN
+F 1 "1N4004" V 4205 1429 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4250 1175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4250 1350 50  0001 C CNN
+	1    4250 1350
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2500 1400 2500 1550
+Wire Wire Line
+	2500 1200 2500 1050
+Wire Wire Line
+	4250 1100 4250 1200
+$Comp
+L power:GND #PWR04
+U 1 1 5BE994A9
+P 2750 3550
+F 0 "#PWR04" H 2750 3300 50  0001 C CNN
+F 1 "GND" H 2755 3377 50  0000 C CNN
+F 2 "" H 2750 3550 50  0001 C CNN
+F 3 "" H 2750 3550 50  0001 C CNN
+	1    2750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPin0-12Enable1
+U 1 1 5BE9E2C1
+P 2500 2300
+F 0 "bitPin0-12Enable1" H 2420 2075 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2166 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 2300 50  0001 C CNN
+F 3 "~" H 2500 2300 50  0001 C CNN
+	1    2500 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPinGnd1
+U 1 1 5BE9E6DE
+P 2500 3400
+F 0 "bitPinGnd1" H 2420 3175 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 3266 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 3400 50  0001 C CNN
+F 3 "~" H 2500 3400 50  0001 C CNN
+	1    2500 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 3400 2750 3400
+Wire Wire Line
+	2750 3400 2750 3550
+$Comp
+L Driver_Motor:L293D U1
+U 1 1 5BEA15C1
+P 4250 3000
+F 0 "U1" H 4250 4178 50  0000 C CNN
+F 1 "L293D" H 4250 4087 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 4500 2250 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 3950 3700 50  0001 C CNN
+	1    4250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPin1-1A1
+U 1 1 5BEA4759
+P 2500 2650
+F 0 "bitPin1-1A1" H 2420 2425 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2516 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 2650 50  0001 C CNN
+F 3 "~" H 2500 2650 50  0001 C CNN
+	1    2500 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 2650 3250 2650
+$Comp
+L Connector_Generic:Conn_01x01 bitPin2-2A1
+U 1 1 5BEA498C
+P 2500 3000
+F 0 "bitPin2-2A1" H 2420 2775 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2866 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 3000 50  0001 C CNN
+F 3 "~" H 2500 3000 50  0001 C CNN
+	1    2500 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3050 2300 3050 2800
+Wire Wire Line
+	3050 2800 3750 2800
+Wire Wire Line
+	2700 2300 3050 2300
+Wire Wire Line
+	3250 2650 3250 2400
+Wire Wire Line
+	3250 2400 3750 2400
+Wire Wire Line
+	3450 3000 3450 2600
+Wire Wire Line
+	3450 2600 3750 2600
+Wire Wire Line
+	2700 3000 3450 3000
+Wire Wire Line
+	4350 2000 4250 2000
+Wire Wire Line
+	4250 1500 4250 2000
+Connection ~ 4250 2000
+Wire Wire Line
+	4250 2000 4150 2000
+Wire Wire Line
+	4050 3800 4150 3800
+Connection ~ 4150 3800
+Wire Wire Line
+	4150 3800 4250 3800
+Connection ~ 4350 3800
+Wire Wire Line
+	4350 3800 4450 3800
+$Comp
+L power:GND #PWR0101
+U 1 1 5BEA86A5
+P 4250 4100
+F 0 "#PWR0101" H 4250 3850 50  0001 C CNN
+F 1 "GND" H 4255 3927 50  0000 C CNN
+F 2 "" H 4250 4100 50  0001 C CNN
+F 3 "" H 4250 4100 50  0001 C CNN
+	1    4250 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4100 4250 4000
+Connection ~ 4250 3800
+Wire Wire Line
+	4250 3800 4350 3800
+Wire Wire Line
+	3750 3400 3750 4000
+Wire Wire Line
+	3750 4000 4250 4000
+Connection ~ 4250 4000
+Wire Wire Line
+	4250 4000 4250 3800
+$Comp
+L Diode:1N4004 D4
+U 1 1 5BEA8F86
+P 5600 2250
+F 0 "D4" V 5646 2329 50  0000 L CNN
+F 1 "1N4004" V 5555 2329 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5600 2075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5600 2250 50  0001 C CNN
+	1    5600 2250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Diode:1N4004 D2
+U 1 1 5BEA9140
+P 5600 1750
+F 0 "D2" V 5646 1829 50  0000 L CNN
+F 1 "1N4004" V 5555 1829 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5600 1575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5600 1750 50  0001 C CNN
+	1    5600 1750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Diode:1N4004 D3
+U 1 1 5BEA9334
+P 6400 1750
+F 0 "D3" V 6446 1829 50  0000 L CNN
+F 1 "1N4004" V 6355 1829 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6400 1575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6400 1750 50  0001 C CNN
+	1    6400 1750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Diode:1N4004 D5
+U 1 1 5BEA9403
+P 6400 2250
+F 0 "D5" V 6446 2329 50  0000 L CNN
+F 1 "1N4004" V 6355 2329 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6400 2075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6400 2250 50  0001 C CNN
+	1    6400 2250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Motor:Motor_DC M1
+U 1 1 5BEA9791
+P 5900 2000
+F 0 "M1" V 6195 1950 50  0000 C CNN
+F 1 "Motor_DC" V 6104 1950 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P7.62mm_Drill2mm" H 5900 1910 50  0001 C CNN
+F 3 "~" H 5900 1910 50  0001 C CNN
+	1    5900 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 1900 5600 2000
+Wire Wire Line
+	5700 2000 5600 2000
+Connection ~ 5600 2000
+Wire Wire Line
+	5600 2000 5600 2100
+Wire Wire Line
+	6400 1900 6400 2000
+Wire Wire Line
+	6200 2000 6400 2000
+Connection ~ 6400 2000
+Wire Wire Line
+	6400 2000 6400 2100
+$Comp
+L power:+5V #PWR0102
+U 1 1 5BEAAA54
+P 6000 1450
+F 0 "#PWR0102" H 6000 1300 50  0001 C CNN
+F 1 "+5V" H 6015 1623 50  0000 C CNN
+F 2 "" H 6000 1450 50  0001 C CNN
+F 3 "" H 6000 1450 50  0001 C CNN
+	1    6000 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5BEAAC74
+P 6000 2550
+F 0 "#PWR0103" H 6000 2300 50  0001 C CNN
+F 1 "GND" H 6005 2377 50  0000 C CNN
+F 2 "" H 6000 2550 50  0001 C CNN
+F 3 "" H 6000 2550 50  0001 C CNN
+	1    6000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2400 6000 2400
+Wire Wire Line
+	5600 1600 6000 1600
+Wire Wire Line
+	6000 1450 6000 1600
+Connection ~ 6000 1600
+Wire Wire Line
+	6000 1600 6400 1600
+Wire Wire Line
+	6000 2400 6000 2550
+Connection ~ 6000 2400
+Wire Wire Line
+	6000 2400 6400 2400
+Wire Wire Line
+	4750 2400 4750 2000
+Wire Wire Line
+	4750 2000 5600 2000
+Wire Wire Line
+	4750 2600 5250 2600
+Wire Wire Line
+	5250 2600 5250 2900
+Wire Wire Line
+	5250 2900 6750 2900
+Wire Wire Line
+	6750 2900 6750 2000
+Wire Wire Line
+	6750 2000 6400 2000
+$EndSCHEMATC

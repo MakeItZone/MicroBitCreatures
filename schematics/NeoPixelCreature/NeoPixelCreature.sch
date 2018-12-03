@@ -1,0 +1,213 @@
+EESchema Schematic File Version 4
+LIBS:NeoPixelCreature-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x01 5VBat1
+U 1 1 5BE96103
+P 2700 1200
+F 0 "5VBat1" H 2780 1242 50  0000 L CNN
+F 1 "Conn_01x01" H 2780 1151 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 2700 1200 50  0001 C CNN
+F 3 "~" H 2700 1200 50  0001 C CNN
+	1    2700 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 BatGnd1
+U 1 1 5BE96173
+P 2700 1400
+F 0 "BatGnd1" H 2780 1442 50  0000 L CNN
+F 1 "Conn_01x01" H 2780 1351 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 2700 1400 50  0001 C CNN
+F 3 "~" H 2700 1400 50  0001 C CNN
+	1    2700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BE962AC
+P 2500 1550
+F 0 "#PWR02" H 2500 1300 50  0001 C CNN
+F 1 "GND" H 2505 1377 50  0000 C CNN
+F 2 "" H 2500 1550 50  0001 C CNN
+F 3 "" H 2500 1550 50  0001 C CNN
+	1    2500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BE9637A
+P 2500 1050
+F 0 "#PWR01" H 2500 900 50  0001 C CNN
+F 1 "+5V" H 2515 1223 50  0000 C CNN
+F 2 "" H 2500 1050 50  0001 C CNN
+F 3 "" H 2500 1050 50  0001 C CNN
+	1    2500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5BE963F4
+P 3500 1050
+F 0 "#PWR03" H 3500 900 50  0001 C CNN
+F 1 "+5V" H 3515 1223 50  0000 C CNN
+F 2 "" H 3500 1050 50  0001 C CNN
+F 3 "" H 3500 1050 50  0001 C CNN
+	1    3500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4004 D1
+U 1 1 5BE971BB
+P 3500 1300
+F 0 "D1" V 3546 1379 50  0000 L CNN
+F 1 "1N4004" V 3455 1379 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 1125 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 1300 50  0001 C CNN
+	1    3500 1300
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2500 1400 2500 1550
+Wire Wire Line
+	2500 1200 2500 1050
+Wire Wire Line
+	3500 1050 3500 1150
+$Comp
+L power:GND #PWR04
+U 1 1 5BE994A9
+P 2750 3000
+F 0 "#PWR04" H 2750 2750 50  0001 C CNN
+F 1 "GND" H 2755 2827 50  0000 C CNN
+F 2 "" H 2750 3000 50  0001 C CNN
+F 3 "" H 2750 3000 50  0001 C CNN
+	1    2750 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPin0-data1
+U 1 1 5BE9E2C1
+P 2500 2300
+F 0 "bitPin0-data1" H 2420 2075 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2166 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 2300 50  0001 C CNN
+F 3 "~" H 2500 2300 50  0001 C CNN
+	1    2500 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 bitPinGnd1
+U 1 1 5BE9E6DE
+P 2500 2850
+F 0 "bitPinGnd1" H 2420 2625 50  0000 C CNN
+F 1 "Conn_01x01" H 2420 2716 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 2500 2850 50  0001 C CNN
+F 3 "~" H 2500 2850 50  0001 C CNN
+	1    2500 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 2850 2750 2850
+Wire Wire Line
+	2750 2850 2750 3000
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5BEA7CF0
+P 3850 2300
+F 0 "J1" H 3877 2276 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 3877 2185 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x03_P3.81mm_Drill1.2mm" H 3850 2300 50  0001 C CNN
+F 3 "~" H 3850 2300 50  0001 C CNN
+	1    3850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5BEA88E9
+P 3500 3000
+F 0 "#PWR05" H 3500 2750 50  0001 C CNN
+F 1 "GND" H 3505 2827 50  0000 C CNN
+F 2 "" H 3500 3000 50  0001 C CNN
+F 3 "" H 3500 3000 50  0001 C CNN
+	1    3500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BEA924D
+P 3150 2300
+F 0 "R1" H 3220 2346 50  0000 L CNN
+F 1 "100" H 3220 2255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3080 2300 50  0001 C CNN
+F 3 "~" H 3150 2300 50  0001 C CNN
+	1    3150 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4004 D2
+U 1 1 5BEA7083
+P 3500 1700
+F 0 "D2" V 3546 1779 50  0000 L CNN
+F 1 "1N4004" V 3455 1779 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 1525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 1700 50  0001 C CNN
+	1    3500 1700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3500 1450 3500 1550
+Wire Wire Line
+	3500 1850 3500 2200
+Wire Wire Line
+	3500 2200 3650 2200
+Wire Wire Line
+	3650 2400 3500 2400
+Wire Wire Line
+	3500 2400 3500 3000
+Wire Wire Line
+	3650 2300 3300 2300
+Wire Wire Line
+	3000 2300 2700 2300
+$Comp
+L Device:CP C1
+U 1 1 5BEA8845
+P 4800 2200
+F 0 "C1" H 4918 2246 50  0000 L CNN
+F 1 "220uF" H 4918 2155 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 4838 2050 50  0001 C CNN
+F 3 "~" H 4800 2200 50  0001 C CNN
+	1    4800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5BEA8A50
+P 4800 2500
+F 0 "#PWR0102" H 4800 2250 50  0001 C CNN
+F 1 "GND" H 4805 2327 50  0000 C CNN
+F 2 "" H 4800 2500 50  0001 C CNN
+F 3 "" H 4800 2500 50  0001 C CNN
+	1    4800 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2350 4800 2500
+Connection ~ 3500 1850
+Wire Wire Line
+	4800 1850 4800 2050
+Wire Wire Line
+	3500 1850 4800 1850
+$EndSCHEMATC

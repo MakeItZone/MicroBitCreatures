@@ -1,0 +1,271 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Audio:LM386 U1
+U 1 1 5BE95DA0
+P 5550 2750
+F 0 "U1" H 5891 2796 50  0000 L CNN
+F 1 "LM386" H 5891 2705 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 5650 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm386.pdf" H 5750 2950 50  0001 C CNN
+	1    5550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5BE96103
+P 6850 1150
+F 0 "J1" H 6930 1192 50  0000 L CNN
+F 1 "Conn_01x01" H 6930 1101 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 6850 1150 50  0001 C CNN
+F 3 "~" H 6850 1150 50  0001 C CNN
+	1    6850 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5BE96173
+P 6850 1350
+F 0 "J2" H 6930 1392 50  0000 L CNN
+F 1 "Conn_01x01" H 6930 1301 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 6850 1350 50  0001 C CNN
+F 3 "~" H 6850 1350 50  0001 C CNN
+	1    6850 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BE962AC
+P 6650 1500
+F 0 "#PWR02" H 6650 1250 50  0001 C CNN
+F 1 "GND" H 6655 1327 50  0000 C CNN
+F 2 "" H 6650 1500 50  0001 C CNN
+F 3 "" H 6650 1500 50  0001 C CNN
+	1    6650 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BE9637A
+P 6650 1000
+F 0 "#PWR01" H 6650 850 50  0001 C CNN
+F 1 "+5V" H 6665 1173 50  0000 C CNN
+F 2 "" H 6650 1000 50  0001 C CNN
+F 3 "" H 6650 1000 50  0001 C CNN
+	1    6650 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5BE963F4
+P 5450 1950
+F 0 "#PWR03" H 5450 1800 50  0001 C CNN
+F 1 "+5V" H 5465 2123 50  0000 C CNN
+F 2 "" H 5450 1950 50  0001 C CNN
+F 3 "" H 5450 1950 50  0001 C CNN
+	1    5450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5BE964DD
+P 5450 3200
+F 0 "#PWR08" H 5450 2950 50  0001 C CNN
+F 1 "GND" H 5455 3027 50  0000 C CNN
+F 2 "" H 5450 3200 50  0001 C CNN
+F 3 "" H 5450 3200 50  0001 C CNN
+	1    5450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5BE96625
+P 4800 2650
+F 0 "RV1" H 4730 2696 50  0000 R CNN
+F 1 "5k" H 4730 2605 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 4800 2650 50  0001 C CNN
+F 3 "~" H 4800 2650 50  0001 C CNN
+	1    4800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5BE96846
+P 6150 2900
+F 0 "C2" H 6265 2946 50  0000 L CNN
+F 1 "0.022uF" H 6265 2855 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 6188 2750 50  0001 C CNN
+F 3 "~" H 6150 2900 50  0001 C CNN
+	1    6150 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5BE96B0B
+P 6550 2750
+F 0 "C1" V 6295 2750 50  0000 C CNN
+F 1 "220uF" V 6386 2750 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 6588 2600 50  0001 C CNN
+F 3 "~" H 6550 2750 50  0001 C CNN
+	1    6550 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Speaker LS1
+U 1 1 5BE96CE5
+P 7150 2750
+F 0 "LS1" H 7320 2746 50  0000 L CNN
+F 1 "Speaker" H 7320 2655 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1.2mm" H 7150 2550 50  0001 C CNN
+F 3 "~" H 7140 2700 50  0001 C CNN
+	1    7150 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4004 D1
+U 1 1 5BE971BB
+P 5450 2200
+F 0 "D1" V 5496 2279 50  0000 L CNN
+F 1 "1N4004" V 5405 2279 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5450 2025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5450 2200 50  0001 C CNN
+	1    5450 2200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6650 1350 6650 1500
+Wire Wire Line
+	6650 1150 6650 1000
+Wire Wire Line
+	5450 1950 5450 2050
+Wire Wire Line
+	5450 2350 5450 2450
+Wire Wire Line
+	5450 3050 5450 3200
+$Comp
+L power:GND #PWR06
+U 1 1 5BE9830F
+P 5250 3000
+F 0 "#PWR06" H 5250 2750 50  0001 C CNN
+F 1 "GND" H 5255 2827 50  0000 C CNN
+F 2 "" H 5250 3000 50  0001 C CNN
+F 3 "" H 5250 3000 50  0001 C CNN
+	1    5250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5BE98410
+P 4800 2950
+F 0 "#PWR05" H 4800 2700 50  0001 C CNN
+F 1 "GND" H 4805 2777 50  0000 C CNN
+F 2 "" H 4800 2950 50  0001 C CNN
+F 3 "" H 4800 2950 50  0001 C CNN
+	1    4800 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2850 5250 3000
+Wire Wire Line
+	4800 2800 4800 2950
+Wire Wire Line
+	4950 2650 5250 2650
+$Comp
+L power:GND #PWR04
+U 1 1 5BE994A9
+P 4300 2900
+F 0 "#PWR04" H 4300 2650 50  0001 C CNN
+F 1 "GND" H 4305 2727 50  0000 C CNN
+F 2 "" H 4300 2900 50  0001 C CNN
+F 3 "" H 4300 2900 50  0001 C CNN
+	1    4300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BE99B47
+P 6150 3300
+F 0 "R1" H 6220 3346 50  0000 L CNN
+F 1 "10" H 6220 3255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6080 3300 50  0001 C CNN
+F 3 "~" H 6150 3300 50  0001 C CNN
+	1    6150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5BE99C89
+P 6150 3600
+F 0 "#PWR09" H 6150 3350 50  0001 C CNN
+F 1 "GND" H 6155 3427 50  0000 C CNN
+F 2 "" H 6150 3600 50  0001 C CNN
+F 3 "" H 6150 3600 50  0001 C CNN
+	1    6150 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3450 6150 3600
+Wire Wire Line
+	6150 3050 6150 3150
+Wire Wire Line
+	5850 2750 6150 2750
+Wire Wire Line
+	6950 2750 6700 2750
+Wire Wire Line
+	6400 2750 6150 2750
+Connection ~ 6150 2750
+$Comp
+L power:GND #PWR07
+U 1 1 5BE9AD2A
+P 6950 3050
+F 0 "#PWR07" H 6950 2800 50  0001 C CNN
+F 1 "GND" H 6955 2877 50  0000 C CNN
+F 2 "" H 6950 3050 50  0001 C CNN
+F 3 "" H 6950 3050 50  0001 C CNN
+	1    6950 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3050 6950 2850
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5BE9E2C1
+P 4050 2500
+F 0 "J5" H 3970 2275 50  0000 C CNN
+F 1 "Conn_01x01" H 3970 2366 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 4050 2500 50  0001 C CNN
+F 3 "~" H 4050 2500 50  0001 C CNN
+	1    4050 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5BE9E6DE
+P 4050 2750
+F 0 "J6" H 3970 2525 50  0000 C CNN
+F 1 "Conn_01x01" H 3970 2616 50  0000 C CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 4050 2750 50  0001 C CNN
+F 3 "~" H 4050 2750 50  0001 C CNN
+	1    4050 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 2750 4300 2750
+Wire Wire Line
+	4300 2750 4300 2900
+Wire Wire Line
+	4250 2500 4800 2500
+$EndSCHEMATC
